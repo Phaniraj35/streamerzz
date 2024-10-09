@@ -23,7 +23,7 @@ const Hero = () => {
       variants={containerVariants}
       initial="hidden"
       animate="visible"
-      className="pt-28 lg:pg-36"
+      className="pt-28 lg:pt-36"
     >
       <div className="max-w-7xl mx-auto px-4 flex flex-col items-center">
         <motion.div
