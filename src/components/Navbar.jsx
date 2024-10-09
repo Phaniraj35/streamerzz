@@ -1,6 +1,7 @@
 import { useState } from "react";
 import logo from "../assets/logo.png";
 import { RiCloseFill, RiMenu3Line } from "@remixicon/react";
+import { twMerge } from "tailwind-merge";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -42,18 +43,7 @@ const Navbar = () => {
         </div>
       </div>
 
-      {isOpen && (
-        <div className="md:hidden bg-neutral-900/60 backdrop-blur-md border border-neutral-800 p-4 rounded-xl mt-2">
-          <div className="flex flex-col space-y-4">
-            <CenterNavMenu />
-            <NavLink href="#">Login</NavLink>
-
-            <div className="flex justify-evenly">
-              <NavActionMenu />
-            </div>
-          </div>
-        </div>
-      )}
+      {isOpen && <MobileNav />}
     </nav>
   );
 };
@@ -72,7 +62,10 @@ function NavActionButton({ href, className, children, ...props }) {
   return (
     <a
       href={href}
-      className={`text-white py-2 px-4 rounded-lg transition ${className}`}
+      className={twMerge(
+        "text-white py-2 px-4 rounded-lg transition",
+        className
+      )}
       {...props}
     >
       {children}
@@ -104,5 +97,21 @@ function NavActionMenu() {
         Start Free Trial
       </NavActionButton>
     </>
+  );
+}
+
+function MobileNav() {
+  return (
+    <div className="md:hidden bg-neutral-900/60 backdrop-blur-md border border-neutral-800 p-4 rounded-xl mt-2">
+      <div className="flex flex-col space-y-4">
+        <CenterNavMenu />
+
+        <NavLink href="#">Login</NavLink>
+
+        <div className="flex justify-evenly">
+          <NavActionMenu />
+        </div>
+      </div>
+    </div>
   );
 }
