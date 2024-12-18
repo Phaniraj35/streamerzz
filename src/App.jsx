@@ -1,5 +1,6 @@
 import Hero from "./components/Hero";
 import HowItWorks from "./components/HowitWorks";
+import KeyFeatures from "./components/KeyFeatures";
 import Navbar from "./components/Navbar";
 
 function App() {
@@ -8,6 +9,7 @@ function App() {
       <Navbar />
       <Hero />
       <HowItWorks />
+      <KeyFeatures />
     </main>
   );
 }
