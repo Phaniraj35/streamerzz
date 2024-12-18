@@ -17,12 +17,20 @@ const Navbar = () => {
     <nav className="fixed top-0 right-0 left-0 z-50 mt-2">
       <div className="text-neutral-500 bg-black/60 backdrop-blur-md max-w-7xl mx-auto px-4 py-3 flex justify-between items-center rounded-xl border border-neutral-800">
         {/* logo image */}
-        <img src={logo} alt="Logo image" width={120} height={24} />
+        {/* <img src={logo} alt="Logo image" width={120} height={24} /> */}
+        <div className="flex gap-6 items-center">
+          <span className="font-bold text-2xl text-white">Stream</span>
+
+          {/* hidden on mobile */}
+          <div className="hidden md:flex space-x-6">
+            <CenterNavMenu />
+          </div>
+        </div>
 
         {/* hidden on mobile */}
-        <div className="hidden md:flex space-x-6">
+        {/* <div className="hidden md:flex space-x-6">
           <CenterNavMenu />
-        </div>
+        </div> */}
 
         {/* hidden on mobile */}
         <div className="hidden md:flex items-center space-x-4">
@@ -78,6 +86,7 @@ function CenterNavMenu() {
     <>
       <NavLink href="#works">How it works</NavLink>
       <NavLink href="#pricing">Pricing</NavLink>
+      <NavLink href="#features">Features</NavLink>
       <NavLink href="#testimonials">Testimonials</NavLink>
     </>
   );
