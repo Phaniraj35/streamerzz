@@ -3,6 +3,7 @@ import HowItWorks from "./components/HowitWorks";
 import KeyFeatures from "./components/KeyFeatures";
 import Navbar from "./components/Navbar";
 import Pricing from "./components/Pricing";
+import Testimonials from "./components/Testimonials";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <HowItWorks />
       <KeyFeatures />
       <Pricing />
+      <Testimonials />
     </main>
   );
 }
