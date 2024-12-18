@@ -37,12 +37,13 @@ const Hero = () => {
           variants={fadeInUp}
           className="text-5xl text-center lg:text-8xl my-4 font-semibold tracking-tighter bg-gradient-to-b from-neutral-50 via-neutral-300 to-neutral-700 bg-clip-text text-transparent"
         >
-          {HERO_CONTENT.mainHeading.split("\n").map((text) => (
+          {HERO_CONTENT.mainHeading}
+          {/* {HERO_CONTENT.mainHeading.split("\n").map((text) => (
             <span key={text}>
               {text}
               <br />
             </span>
-          ))}
+          ))} */}
         </motion.h1>
 
         <motion.p
