@@ -16,7 +16,7 @@ const testimonialVariants = {
 
 const Testimonials = () => {
   return (
-    <section id="testimonial">
+    <section id="testimonials">
       <div className="max-w-7xl mx-auto px-4 mt-20">
         <motion.div
           className="text-center mb-12 border-t border-neutral-800"
