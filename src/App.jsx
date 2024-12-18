@@ -1,3 +1,4 @@
+import Footer from "./components/Footer";
 import Hero from "./components/Hero";
 import HowItWorks from "./components/HowitWorks";
 import KeyFeatures from "./components/KeyFeatures";
@@ -14,6 +15,7 @@ function App() {
       <KeyFeatures />
       <Pricing />
       <Testimonials />
+      <Footer />
     </main>
   );
 }
