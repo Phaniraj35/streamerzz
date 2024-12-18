@@ -2,6 +2,7 @@ import Hero from "./components/Hero";
 import HowItWorks from "./components/HowitWorks";
 import KeyFeatures from "./components/KeyFeatures";
 import Navbar from "./components/Navbar";
+import Pricing from "./components/Pricing";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <Hero />
       <HowItWorks />
       <KeyFeatures />
+      <Pricing />
     </main>
   );
 }
